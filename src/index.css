@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+
+:root {
+  --bg-dark: #050505;
+  --accent-cyan: #00f2ff;
+  
+  background-color: var(--bg-dark);
+  color: white;
+  /* Evitamos saltos visuales en el scroll */
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Optimización para animaciones de texto */
+.hero-title {
+  display: block;
+  line-height: 1.1;
+}
